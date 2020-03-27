@@ -1,0 +1,272 @@
+_type: export
+__export_format: 4
+__export_date: 2020-03-27T00:36:40.744Z
+__export_source: insomnia.desktop.app:v7.1.1
+resources:
+  - _id: req_35e5a4088a484ac385305233cb97279f
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: '{"id":"6aec1f2b"}'
+    created: 1585267096159
+    description: ""
+    headers:
+      - id: pair_bc2536fb071a45aab6f11ee2fd2b1e2a
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1585267096159
+    method: POST
+    modified: 1585267232325
+    name: Login
+    parameters: []
+    parentId: fld_7878d54a7dbc4930a4c2f1f1cd646062
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/session
+    _type: request
+  - _id: fld_7878d54a7dbc4930a4c2f1f1cd646062
+    created: 1585267082759
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585267082759
+    modified: 1585267082759
+    name: Session
+    parentId: wrk_2d5c0ace684a4112bd38f5074134e965
+    _type: request_group
+  - _id: wrk_2d5c0ace684a4112bd38f5074134e965
+    created: 1585257556218
+    description: ""
+    modified: 1585257556218
+    name: Semana OminiStack 11
+    parentId: null
+    _type: workspace
+  - _id: req_9dafaf686819497198a6b5c29b1cc322
+    authentication: {}
+    body: {}
+    created: 1585266621417
+    description: ""
+    headers:
+      - description: ""
+        id: pair_eea1dfd19f974c6cb9271c95b2801a46
+        name: Authorization
+        value: 6aec1f2b
+    isPrivate: false
+    metaSortKey: -1585266636895
+    method: GET
+    modified: 1585266699809
+    name: Profile
+    parameters: []
+    parentId: fld_ada57258e055407d830d08f421213b15
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/profile
+    _type: request
+  - _id: fld_ada57258e055407d830d08f421213b15
+    created: 1585265260213
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585265260213
+    modified: 1585265260213
+    name: Incidents
+    parentId: wrk_2d5c0ace684a4112bd38f5074134e965
+    _type: request_group
+  - _id: req_9569aa670ea54935a75f038e50193a20
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title":"Caso 4",
+        	"description": "Detalhe do caso 4",
+        	"value": 98.50
+        }
+    created: 1585265289404
+    description: ""
+    headers:
+      - id: pair_ae7986147fa6469f80eb4265ee0e786b
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_4aff618122f94073bd0dfd19a1a8ee86
+        name: Authorization
+        value: 324c8ec2
+    isPrivate: false
+    metaSortKey: -1585265289404
+    method: POST
+    modified: 1585267648148
+    name: Create
+    parameters: []
+    parentId: fld_ed2a6cec75f340368cdeecc20128d46c
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/incidents
+    _type: request
+  - _id: fld_ed2a6cec75f340368cdeecc20128d46c
+    created: 1585266636845
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585266636845
+    modified: 1585266636845
+    name: CRUD
+    parentId: fld_ada57258e055407d830d08f421213b15
+    _type: request_group
+  - _id: req_43d851799e4b446ab078cdbf5651e2ca
+    authentication: {}
+    body: {}
+    created: 1585266216375
+    description: ""
+    headers:
+      - description: ""
+        id: pair_4aff618122f94073bd0dfd19a1a8ee86
+        name: Authorization
+        value: 6aec1f2b
+    isPrivate: false
+    metaSortKey: -1585265289354
+    method: DELETE
+    modified: 1585266642514
+    name: Delete
+    parameters: []
+    parentId: fld_ed2a6cec75f340368cdeecc20128d46c
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/incidents/1
+    _type: request
+  - _id: req_e9267a2cdff04681964cab834843eb11
+    authentication: {}
+    body: {}
+    created: 1585265269857
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1585265289304
+    method: GET
+    modified: 1585268619568
+    name: Lists
+    parameters: []
+    parentId: fld_ed2a6cec75f340368cdeecc20128d46c
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/incidents?page=1
+    _type: request
+  - _id: req_ce851ea62cc549d1a563b3b5f652daa6
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name":"APAE",
+        	"email": "contato@apae.org.br",
+        	"whatsapp": "+55 (21) 9649-4748",
+        	"city": "Rio de Janeiro",
+        	"uf": "RJ"
+        }
+    created: 1585264030241
+    description: ""
+    headers:
+      - id: pair_e88e3134938e43baa59f052e7b7c8780
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1585264030241
+    method: POST
+    modified: 1585264163095
+    name: Create
+    parameters: []
+    parentId: fld_1e08a5b026184ce788c3c5f862ec5151
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/ongs
+    _type: request
+  - _id: fld_1e08a5b026184ce788c3c5f862ec5151
+    created: 1585258886904
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585258886905
+    modified: 1585258886904
+    name: Ongs
+    parentId: wrk_2d5c0ace684a4112bd38f5074134e965
+    _type: request_group
+  - _id: req_a6ae60e2051d46989777c5a6f5048499
+    authentication: {}
+    body: {}
+    created: 1585258899847
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1585258899847
+    method: GET
+    modified: 1585264069365
+    name: Lists
+    parameters: []
+    parentId: fld_1e08a5b026184ce788c3c5f862ec5151
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://{{url}}:{{port}}/ongs
+    _type: request
+  - _id: env_46aafd6d540898b7c782f2a278cdd8059d264b7a
+    color: null
+    created: 1585257556552
+    data: {}
+    dataPropertyOrder: null
+    isPrivate: false
+    metaSortKey: 1585257556552
+    modified: 1585257556552
+    name: Base Environment
+    parentId: wrk_2d5c0ace684a4112bd38f5074134e965
+    _type: environment
+  - _id: jar_46aafd6d540898b7c782f2a278cdd8059d264b7a
+    cookies: []
+    created: 1585257556555
+    modified: 1585257556555
+    name: Default Jar
+    parentId: wrk_2d5c0ace684a4112bd38f5074134e965
+    _type: cookie_jar
+  - _id: env_840ec215347945e2ad0ff37ea2187080
+    color: null
+    created: 1585257568796
+    data:
+      port: 3333
+      url: localhost
+    dataPropertyOrder:
+      "&":
+        - url
+        - port
+    isPrivate: false
+    metaSortKey: 1585257568796
+    modified: 1585257628743
+    name: Desenvolvimento
+    parentId: env_46aafd6d540898b7c782f2a278cdd8059d264b7a
+    _type: environment
